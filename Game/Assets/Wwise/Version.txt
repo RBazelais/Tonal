@@ -1,0 +1,9 @@
+Wwise Unity Integration Version Info:
+
+Stable Version (SVN): 2401
+
+Based on Wwise SDK: 2015.1.4 Build 5497
+
+Unity Integration Version: 11
+
+Installed Platforms: Android
