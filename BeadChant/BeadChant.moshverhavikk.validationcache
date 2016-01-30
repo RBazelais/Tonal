@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="70">
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Attenuations\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\BeadChant.wproj" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Control Surface Sessions\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Conversion Settings\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Conversion Settings\Factory Conversion Settings.wwu" DateLow="2022082816" DateHigh="30463004"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Dynamic Dialogue\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Effects\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Effects\Factory Effects.wwu" DateLow="2022082816" DateHigh="30463004"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Events\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Game Parameters\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Mixing Sessions\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Modulators\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Presets\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Queries\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Queries\Factory Queries.wwu" DateLow="2022082816" DateHigh="30463004"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\SoundBanks\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Soundcaster Sessions\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\States\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Switches\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+	<ValidationCacheItem File="Y:\Projects\Wwise\BeadChant\BeadChant\Triggers\Default Work Unit.wwu" DateLow="4205407232" DateHigh="30497658"/>
+</ValidationCache>

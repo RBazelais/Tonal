@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="10" SoundbankVersion="113">
+	<RootPaths>
+		<ProjectRoot>/Users/moshverhavikk/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Projects/Wwise/BeadChant/BeadChant/</ProjectRoot>
+		<SourceFilesRoot>/Users/moshverhavikk/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Projects/Wwise/BeadChant/BeadChant/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/moshverhavikk/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Projects/Wwise/BeadChant/BeadChant/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/moshverhavikk/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Projects/Wwise/BeadChant/BeadChant/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="900901209" Language="SFX">
+			<ShortName>BeadChant_Soundbank</ShortName>
+			<Path>BeadChant_Soundbank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

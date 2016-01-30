@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C50C7CEE-E7C4-4B3C-9F12-0AA9467FD932}" SchemaVersion="70">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{C50C7CEE-E7C4-4B3C-9F12-0AA9467FD932}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Music" ID="{4192C10D-BE9E-48C0-BCD1-DF2E6EF5BACA}" ShortID="870954808">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{114A9590-BC00-4D3E-B782-5A97588DBA71}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{32BD4F78-6634-45F0-9A0D-3D8F9F490396}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

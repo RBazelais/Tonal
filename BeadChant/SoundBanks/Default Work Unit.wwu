@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0D6A144A-0257-4F27-8914-3A5CBC0FD4F5}" SchemaVersion="70">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{0D6A144A-0257-4F27-8914-3A5CBC0FD4F5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="BeadChant_Soundbank" ID="{41C48228-BDC9-49B2-B1CF-CB1F9C179FCB}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
