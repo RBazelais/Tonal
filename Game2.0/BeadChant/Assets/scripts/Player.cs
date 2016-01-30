@@ -7,13 +7,14 @@ public class Player : MonoBehaviour {
 
 	public float speed = 1000.0F;
 	public int maxLength;
+	SpriteRenderer sr;
 
 	List<GameObject> beads = new List<GameObject>();
 	Rigidbody2D rb2d;
 
 	// Use this for initialization
 	void Start () {
-
+		sr = gameObject.GetComponent<SpriteRenderer> ();
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 
 	
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour {
 			rb2d.velocity = speed * dir;
 
 	}
+
+
 
 	void  OnTriggerEnter2D(Collider2D other){
 		GameObject tempBead;
@@ -66,7 +69,9 @@ public class Player : MonoBehaviour {
 				beads.Add(tempBead);
 
 
-			}else if(beads.Count == maxLength){
+			}
+
+			else if(beads.Count == maxLength){
 				//Give me the element of the first thing
 				GameObject[] firstBead = beads.GetRange(0,1).ToArray();
 				//
@@ -79,10 +84,45 @@ public class Player : MonoBehaviour {
 
 			}
 
-			tempBead.GetComponent<Bead>().AttachDistanceJoint(rb2d);
+			ColorUpdate();
 
 
 		}
 
+
+	}
+
+	void ColorUpdate(){
+		float redAmount=0;
+		float greenAmount=0;
+		float blueAmount=0;
+		Color beadColor;
+		Color playerColor = Color.white;
+
+		foreach (GameObject bead in beads) {
+			beadColor = bead.GetComponent<Bead>().GetColor ();
+			Debug.Log (beadColor);
+			redAmount+=beadColor[0];
+			greenAmount += beadColor[1];
+			blueAmount += beadColor[2];
+
+			
+		}
+
+		playerColor.r = redAmount / beads.Count;
+		playerColor.g = greenAmount / beads.Count;
+		playerColor.b = blueAmount / beads.Count;
+
+
+
+
+		Debug.Log (playerColor);
+		sr.color = playerColor;
+
+
+
+
+	
+		
 	}
 }
