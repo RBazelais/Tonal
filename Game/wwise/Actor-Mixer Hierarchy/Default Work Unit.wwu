@@ -12,6 +12,27 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{32BD4F78-6634-45F0-9A0D-3D8F9F490396}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="GameJam_Phrase1" ID="{F5A7867C-0EAF-44DB-A22D-27409D71CBA0}" ShortID="948593538" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{114A9590-BC00-4D3E-B782-5A97588DBA71}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{32BD4F78-6634-45F0-9A0D-3D8F9F490396}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GameJam_Phrase1" ID="{3C6AF50C-7FBA-43DA-A113-160A649E0C3B}" ShortID="550438175">
+									<Language>SFX</Language>
+									<AudioFile>GameJam_Phrase1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GameJam_Phrase1" ID="{3C6AF50C-7FBA-43DA-A113-160A649E0C3B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

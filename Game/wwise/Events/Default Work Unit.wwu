@@ -3,7 +3,17 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{2928AD91-57A0-46A5-B5F2-6D4244B343B2}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Phrase1" ID="{EC3073B7-27C7-4B1B-89DD-DDD7A89AE99D}"/>
+				<Event Name="Phrase1" ID="{EC3073B7-27C7-4B1B-89DD-DDD7A89AE99D}">
+					<ChildrenList>
+						<Action Name="Play" ID="{56F1D558-1DAB-4126-8765-9A913635F794}" ShortID="420663250" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6E80B15E-86FF-46F7-B640-739A474B70E4}" Global="false">
+									<ObjectRef Name="GameJam_Phrase1" ID="{F5A7867C-0EAF-44DB-A22D-27409D71CBA0}" WorkUnitID="{C50C7CEE-E7C4-4B3C-9F12-0AA9467FD932}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

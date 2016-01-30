@@ -14,6 +14,15 @@
 		<SoundBank Id="900901209" Language="SFX">
 			<ShortName>BeadChant_Soundbank</ShortName>
 			<Path>BeadChant_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1392167763" Name="Phrase1"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="550438175" Language="SFX">
+					<ShortName>GameJam_Phrase1.wav</ShortName>
+					<Path>SFX/GameJam_Phrase1_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ShortName>Init</ShortName>

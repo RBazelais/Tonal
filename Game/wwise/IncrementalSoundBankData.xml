@@ -2,13 +2,13 @@
 <IncrementalBankBuild Version="4" Flags="601859981">
 	<Platform GUID="{4231FF20-AE55-4A99-AD41-C01EE3D88622}">
 		<Language ID="0">
-			<Bank Name="BeadChant_Soundbank" Hash="3948128613" StreamHash="157587662" Timestamp="130986449620000000"/>
+			<Bank Name="BeadChant_Soundbank" Hash="1709849313" StreamHash="157587662" Timestamp="130986467640000000"/>
 			<Bank Name="Init" Hash="2237516267" StreamHash="157587662" Timestamp="130986449620000000"/>
 		</Language>
 	</Platform>
 	<Platform GUID="{12C5B582-7E23-49D1-827C-272006BB4B40}">
 		<Language ID="0">
-			<Bank Name="BeadChant_Soundbank" Hash="3948128613" StreamHash="157587662" Timestamp="130986449630000000"/>
+			<Bank Name="BeadChant_Soundbank" Hash="1709849313" StreamHash="157587662" Timestamp="130986467650000000"/>
 			<Bank Name="Init" Hash="2237516267" StreamHash="157587662" Timestamp="130986449630000000"/>
 		</Language>
 	</Platform>
