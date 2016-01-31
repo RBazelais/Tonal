@@ -5,25 +5,31 @@ public class Bead : MonoBehaviour {
 	DistanceJoint2D dj2d;
 	public Rigidbody2D rb2d;
 	public bool isActive;
-	AudioSource musicalPhrase;
+	LevelManager levelManager;
+	//AudioSource musicalPhrase;
 	SpriteRenderer sr;
-
+	public int beadID;
 
 	// Use this for initialization
 	void Start () {
 		isActive = true;
 		//assign distance joint 2d to the component made in the editor
-		dj2d = gameObject.GetComponent<DistanceJoint2D> ();
+		dj2d = gameObject.GetComponent<DistanceJoint2D>();
+
 		dj2d.enabled = false;
 		//assign rigidbody2d to the rigidbody of the bead
-		rb2d = gameObject.GetComponent<Rigidbody2D> ();
-		sr = gameObject.GetComponent<SpriteRenderer> ();
-		musicalPhrase = gameObject.GetComponent<AudioSource> ();
-		SetupBead ();
+		rb2d = gameObject.GetComponent<Rigidbody2D>();
+		sr = gameObject.GetComponent<SpriteRenderer>();
+		levelManager = GameObject.FindGameObjectWithTag ("LevelManager").GetComponent<LevelManager>();
+
+		//musicalPhrase = gameObject.GetComponent<AudioSource> ();
+		//SetupBead ();
 	
 	}
 
-	public void SetupBead(){
+	public void SetupBead(int beadNum, Sprite sprite){
+		sr = gameObject.GetComponent<SpriteRenderer>();
+		sr.sprite = sprite;
 
 		float red = Random.Range (0.0f, 1.0f);
 		float green = Random.Range (0.0f, 1.0f);
@@ -32,16 +38,18 @@ public class Bead : MonoBehaviour {
 		Color beadColor = new Vector4 (red, green, blue, 1.0f);
 		sr.color = beadColor;
 
-		/**
-		int beadID = Mathf.RoundToInt (Random.Range (1, 6));
-			
+		beadID = beadNum;
+
+		//int beadID = Mathf.RoundToInt (Random.Range (1, 6));
+		/**	
+		beadID = beadNum;
 		switch (beadID) {
 
 		case 1:
-			sr.color = Color.blue;
+			sr.color = Color.red;
 			break;
 		case 2:
-			sr.color = Color.red;
+			sr.color = Color.blue;
 			break;
 		case 3:
 			sr.color = Color.green;
@@ -53,26 +61,22 @@ public class Bead : MonoBehaviour {
 			sr.color = Color.yellow;
 			break;
 		case 6:
-			sr.color = Color.magenta;
+			sr.color = new Vector4(128, 0, 0, 1);
 			break;
 		case 7:
+			sr.color = new Vector4(0, 128, 0, 1);
 			break;
 		case 8:
+			sr.color = new Vector4(0, 128, 0, 1);
 			break;
 		case 9:
-			break;
-		case 10:
-			break;
-		case 11:
-			break;
-		case 12:
-			break;
-	
+			sr.color = new Vector4(0, 128, 128, 1);
+			break;	
 		default:
 			break;
 
 
-		}**/
+		}*/
 
 	}
 	
@@ -85,8 +89,7 @@ public class Bead : MonoBehaviour {
 		dj2d.enabled = true;
 		isActive = false;
 		dj2d.connectedBody = connectedRigidbody;
-		musicalPhrase.Play ();
-		//Handheld.Vibrate ();
+		levelManager.PlayPhrase (beadID);
 
 
 	}

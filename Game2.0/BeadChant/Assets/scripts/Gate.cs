@@ -61,7 +61,8 @@ public class Gate : MonoBehaviour {
 		}
 
 		if (canPassGate) {
-			levelManager.LoadNextLevel ();
+			player.GetComponent<Player>().PlayPhrase();
+			//levelManager.LoadNextLevel ();
 		
 		} else {
 			player.GetComponent<Player>().DropAllNotes();

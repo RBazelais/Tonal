@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
 	public int maxLength;
 	SpriteRenderer sr;
 	LevelManager levelManager;
+	float angle;
 
 	List<GameObject> beads = new List<GameObject>();
 
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+			
 			Vector2 dir = Vector3.zero;
 			dir.y = Input.acceleration.y;
 			dir.x = Input.acceleration.x;
@@ -36,7 +37,14 @@ public class Player : MonoBehaviour {
 			
 			rb2d.velocity = speed * dir;
 			
+			//angle = Vector2.Angle (dir, gameObject.transform.position);
+		 	
 
+
+	}
+
+	void FixedUpdate(){
+		//rb2d.MoveRotation (angle);
 	}
 
 
@@ -57,6 +65,7 @@ public class Player : MonoBehaviour {
 			if(beads.Count == 0){
 				tempBead.GetComponent<Bead>().AttachDistanceJoint(rb2d);
 				beads.Add(tempBead);
+				levelManager.MakeBead ();
 			}
 
 			/**if there are beads in the array attach the bead the player
@@ -71,6 +80,7 @@ public class Player : MonoBehaviour {
 				//
 				previousBead[0].GetComponent<Bead>().AttachDistanceJoint(tempBead.GetComponent<Bead>().rb2d);
 				beads.Add(tempBead);
+				levelManager.MakeBead ();
 
 
 			}
@@ -142,6 +152,19 @@ public class Player : MonoBehaviour {
 		beads.Clear ();
 		//Debug.Log ("Number of beads:" + beads.Count);
 	
+	}
+
+	public void PlayPhrase(){
+		int[] audioClips = new int[beads.Count];
+		int i = 0;
+
+		foreach (GameObject bead in beads) {
+
+			audioClips[i] = bead.GetComponent<Bead>().beadID;
+			i++;
+		}
+
+		levelManager.PlaySong (audioClips);
 	}
 
 
