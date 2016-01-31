@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
@@ -21,7 +17,6 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< Updated upstream
 								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
@@ -40,33 +35,7 @@ Global
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
-	EndGlobalSection
-EndGlobal
-=======
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeadChant.CSharp", "BeadChant.CSharp.csproj", "{832BF51A-DE97-8F21-547A-8F88895754E1}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{832BF51A-DE97-8F21-547A-8F88895754E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{832BF51A-DE97-8F21-547A-8F88895754E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{832BF51A-DE97-8F21-547A-8F88895754E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{832BF51A-DE97-8F21-547A-8F88895754E1}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
->>>>>>> origin/master
-=======
-	GlobalSection(MonoDevelopProperties) = preSolution
+	EndGlobalSection	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
->>>>>>> Stashed changes
