@@ -1,14 +1,15 @@
 ﻿
-/**using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
-​
+
 public class menuScript : MonoBehaviour {
 	
 	public Canvas quitMenu;
 	public Button startText;
 	public Button exitText;
-	​
+
 		//Use this for initialization
 	void Start(){
 		//w.e is assigned to the quitMenu var. will get the canvas component
@@ -19,7 +20,7 @@ public class menuScript : MonoBehaviour {
 		quitMenu.enabled = false;
 		
 	}
-	​
+
 		//whenever we press the exit or yes button in the start menu 
 	//show exit menu and disable start menu buttons
 
@@ -39,9 +40,9 @@ public class menuScript : MonoBehaviour {
 
 		//When play is clicked load the first level
 	public void StartLevel(){
-		Application.LoadLevel(1);
+		SceneManager.LoadScene(1);
 	}
-	​
+
 		//When in the exit menu and yes is clicked quit the game appli
 	public void ExitGame(){
 		Application.Quit();
@@ -49,4 +50,4 @@ public class menuScript : MonoBehaviour {
 
 
 	
-}**/
+}
