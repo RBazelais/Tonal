@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\Bead.cs" />
      <Compile Include="Assets\scripts\GameManager.cs" />
+     <Compile Include="Assets\scripts\Gate.cs" />
      <Compile Include="Assets\scripts\LevelManager.cs" />
      <Compile Include="Assets\scripts\Player.cs" />
  <Reference Include="UnityEngine.UI">

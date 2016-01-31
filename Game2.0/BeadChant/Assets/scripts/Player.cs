@@ -8,14 +8,17 @@ public class Player : MonoBehaviour {
 	public float speed = 1000.0F;
 	public int maxLength;
 	SpriteRenderer sr;
+	LevelManager levelManager;
 
 	List<GameObject> beads = new List<GameObject>();
+
 	Rigidbody2D rb2d;
 
 	// Use this for initialization
 	void Start () {
 		sr = gameObject.GetComponent<SpriteRenderer> ();
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
+		levelManager = GameObject.FindGameObjectWithTag ("LevelManager").GetComponent<LevelManager> ();
 
 	
 	
@@ -32,6 +35,7 @@ public class Player : MonoBehaviour {
 			
 			
 			rb2d.velocity = speed * dir;
+			
 
 	}
 
@@ -58,7 +62,7 @@ public class Player : MonoBehaviour {
 			/**if there are beads in the array attach the bead the player
 			 and change the rigidbody of the previous bead to the current bead */
 			//if you've encountered a bead and you're not at your maxLength...
-			else if(beads.Count != maxLength){
+			else if(beads.Count != maxLength && beads.Count>0){
 				//
 				tempBead.GetComponent<Bead>().AttachDistanceJoint(rb2d);
 
@@ -75,7 +79,10 @@ public class Player : MonoBehaviour {
 				//Give me the element of the first thing
 				GameObject[] firstBead = beads.GetRange(0,1).ToArray();
 				//
+				beads.Remove(firstBead[0]);
 				Destroy(firstBead[0]);
+
+				levelManager.MakeBead();
 				GameObject[] previousBead = beads.GetRange(beads.Count-1, 1).ToArray();
 				//
 				previousBead[0].GetComponent<Bead>().AttachDistanceJoint(tempBead.GetComponent<Bead>().rb2d);
@@ -92,6 +99,12 @@ public class Player : MonoBehaviour {
 
 	}
 
+	public Color GetColor(){
+
+		return sr.color;
+	}
+
+	//update the color of the player to match the chain of beads
 	void ColorUpdate(){
 		float redAmount=0;
 		float greenAmount=0;
@@ -113,16 +126,23 @@ public class Player : MonoBehaviour {
 		playerColor.g = greenAmount / beads.Count;
 		playerColor.b = blueAmount / beads.Count;
 
-
-
-
-		Debug.Log (playerColor);
+		//Debug.Log (playerColor);
 		sr.color = playerColor;
-
-
-
-
-	
-		
+				
 	}
+
+	public void DropAllNotes(){
+		foreach (GameObject bead in beads) {
+
+			Destroy (bead);
+			levelManager.MakeBead ();
+		}
+
+		sr.color = Color.white;
+		beads.Clear ();
+		//Debug.Log ("Number of beads:" + beads.Count);
+	
+	}
+
+
 }

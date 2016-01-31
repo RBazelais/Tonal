@@ -24,7 +24,15 @@ public class Bead : MonoBehaviour {
 	}
 
 	public void SetupBead(){
-	
+
+		float red = Random.Range (0.0f, 1.0f);
+		float green = Random.Range (0.0f, 1.0f);
+		float blue = Random.Range (0.0f, 1.0f);
+		
+		Color beadColor = new Vector4 (red, green, blue, 1.0f);
+		sr.color = beadColor;
+
+		/**
 		int beadID = Mathf.RoundToInt (Random.Range (1, 6));
 			
 		switch (beadID) {
@@ -62,7 +70,9 @@ public class Bead : MonoBehaviour {
 	
 		default:
 			break;
-		}
+
+
+		}**/
 
 	}
 	
