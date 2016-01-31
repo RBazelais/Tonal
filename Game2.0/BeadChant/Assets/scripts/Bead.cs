@@ -7,7 +7,8 @@ public class Bead : MonoBehaviour {
 	public bool isActive;
 	LevelManager levelManager;
 	//AudioSource musicalPhrase;
-	SpriteRenderer sr;
+	SpriteRenderer srParent;
+    SpriteRenderer srChild;
 	public int beadID;
 
 	// Use this for initialization
@@ -19,7 +20,8 @@ public class Bead : MonoBehaviour {
 		dj2d.enabled = false;
 		//assign rigidbody2d to the rigidbody of the bead
 		rb2d = gameObject.GetComponent<Rigidbody2D>();
-		sr = gameObject.GetComponent<SpriteRenderer>();
+        //sr = transform.Find("CoreBead").GetComponent<SpriteRenderer>();
+		//sr = gameObject.GetComponent<SpriteRenderer>();
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager").GetComponent<LevelManager>();
 
 		//musicalPhrase = gameObject.GetComponent<AudioSource> ();
@@ -28,15 +30,16 @@ public class Bead : MonoBehaviour {
 	}
 
 	public void SetupBead(int beadNum, Sprite sprite){
-		sr = gameObject.GetComponent<SpriteRenderer>();
-		sr.sprite = sprite;
+		srChild = transform.Find("CoreBead").GetComponent<SpriteRenderer>();
+        srParent = gameObject.GetComponent<SpriteRenderer>();
+		srParent.sprite = sprite;
 
 		float red = Random.Range (0.0f, 1.0f);
 		float green = Random.Range (0.0f, 1.0f);
 		float blue = Random.Range (0.0f, 1.0f);
 		
 		Color beadColor = new Vector4 (red, green, blue, 1.0f);
-		sr.color = beadColor;
+		srChild.color = beadColor;
 
 		beadID = beadNum;
 
@@ -95,6 +98,6 @@ public class Bead : MonoBehaviour {
 	}
 
 	public Color GetColor(){
-		return sr.color;
+		return srChild.color;
 	}
 }

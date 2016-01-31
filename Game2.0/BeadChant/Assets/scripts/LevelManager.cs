@@ -14,11 +14,13 @@ public class LevelManager : MonoBehaviour {
 	int verticalMin = -60;
 	public int totalBeads;
 	bool levelStarted = false;
+    bool playNow;
 
 	// Use this for initialization
 	void Start () {
 		audioSourceArray = gameObject.GetComponents<AudioSource>();
-		//SetupLevel ();
+        //SetupLevel ();
+        playNow = false;
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,8 @@ public class LevelManager : MonoBehaviour {
 			levelStarted = true;
 			SetupLevel ();
 		}
+
+        
 	
 	}
 
@@ -64,26 +68,37 @@ public class LevelManager : MonoBehaviour {
 
 	public void PlayPhrase(int phraseNumber){
 		audioSourceArray[phraseNumber].Play ();
+       
+
+
 	}
 
 	public void PlaySong(int[] audioClips){
-		
-		for(int i = 0; i<audioClips.Length; i++){
-			audioSourceArray[audioClips [i]].Play();
-			StartCoroutine(FinishClip());
 
-		}
+       
+        AudioSource audioSource;
+        
+        for(int i = 0; i<audioClips.Length; i++)
+        {
+            audioSource = audioSourceArray[audioClips[i]];
+            audioSource.Play();
+         
+
+        }
+       
+            
+
+        
 
 
-		LoadNextLevel ();
+		//LoadNextLevel ();
 		
 
 	}
 
-	IEnumerator FinishClip(){
-		
-		yield return new WaitForSeconds (3.62f);
-
+	IEnumerator FinishClip(AudioSource audioSource){
+		audioSource.Play ();
+		yield return new WaitForSeconds (audioSource.clip.length);
 
 	}
 
