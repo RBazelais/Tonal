@@ -1,10 +1,10 @@
-﻿/**
-//using UnityEngine;
-//using UnityEngine.UI;
-//using System;
+﻿
+/**using UnityEngine;
+using UnityEngine.UI;
+using System;
 ​
-public class Menuscript : MonoBehaviour {
-	/**
+public class menuScript : MonoBehaviour {
+	
 	public Canvas quitMenu;
 	public Button startText;
 	public Button exitText;
@@ -42,12 +42,11 @@ public class Menuscript : MonoBehaviour {
 		Application.LoadLevel(1);
 	}
 	​
-		//When in the exit menu and yes is clicked quit the game appliti
+		//When in the exit menu and yes is clicked quit the game appli
 	public void ExitGame(){
 		Application.Quit();
 	}
 
 
 	
-}
-**/
+}**/
