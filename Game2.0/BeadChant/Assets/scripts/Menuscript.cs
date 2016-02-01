@@ -1,10 +1,9 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
-public class menuScript : MonoBehaviour {
+public class Menuscript : MonoBehaviour {
 	
 	public Canvas quitMenu;
 	public Button startText;

@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
 	List<GameObject> beads = new List<GameObject>();
 
 	Rigidbody2D rb2d;
-
+    bool winner = false;
 	// Use this for initialization
 	void Start () {
 		sr = gameObject.GetComponent<SpriteRenderer> ();
@@ -27,16 +27,18 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-			
-			Vector2 dir = Vector3.zero;
-			dir.y = Input.acceleration.y;
-			dir.x = Input.acceleration.x;
-			if (dir.sqrMagnitude > 1)
-				dir.Normalize();
-			
-			
-			rb2d.velocity = speed * dir;
-			
+
+        if (!winner)
+        {
+            Vector2 dir = Vector3.zero;
+            dir.y = Input.acceleration.y;
+            dir.x = Input.acceleration.x;
+            if (dir.sqrMagnitude > 1)
+                dir.Normalize();
+
+
+            rb2d.velocity = speed * dir;
+        }
 			//angle = Vector2.Angle (dir, gameObject.transform.position);
 		 	
 
@@ -113,6 +115,11 @@ public class Player : MonoBehaviour {
 
 		return sr.color;
 	}
+
+    public void StopPlayerMotion()
+    {
+        winner = true;
+    }
 
 	//update the color of the player to match the chain of beads
 	void ColorUpdate(){

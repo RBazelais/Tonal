@@ -6,12 +6,14 @@ public class Gate : MonoBehaviour {
 	LevelManager levelManager;
 	SpriteRenderer sr;
 	public float acceptableRange;
+    AudioSource[] audioSourceArray;
 
 	// Use this for initialization
 	void Start () {
 	
 		levelManager = GameObject.FindGameObjectWithTag ("LevelManager").GetComponent<LevelManager>();
 		sr = gameObject.GetComponent<SpriteRenderer> ();
+        audioSourceArray = gameObject.GetComponents<AudioSource>();
 		SetupGoal ();
 	}
 
@@ -61,10 +63,12 @@ public class Gate : MonoBehaviour {
 		}
 
 		if (canPassGate) {
+            //audioSourceArray[0].Play();
 			player.GetComponent<Player>().PlayPhrase();
 			//levelManager.LoadNextLevel ();
 		
 		} else {
+            audioSourceArray[1].Play();
 			player.GetComponent<Player>().DropAllNotes();
 		}
 
