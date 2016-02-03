@@ -28,22 +28,35 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (!winner)
-        {
+        if (!winner) {
+
+#if UNITY_WEBPLAYER
             Vector2 dir = Vector3.zero;
+            
+            dir.x = Input.GetAxis("Horizontal");
+            dir.y = Input.GetAxis("Vertical");
+            
+            rb2d.velocity = speed * dir;
+#endif
+
+#if UNITY_ANDROID
+            
             dir.y = Input.acceleration.y;
             dir.x = Input.acceleration.x;
-            if (dir.sqrMagnitude > 1)
-                dir.Normalize();
-
-
+            //if (dir.sqrMagnitude > 1)
+            //dir.Normalize();
             rb2d.velocity = speed * dir;
+
+#endif
+
+
+
         }
-			//angle = Vector2.Angle (dir, gameObject.transform.position);
-		 	
+        //angle = Vector2.Angle (dir, gameObject.transform.position);
 
 
-	}
+
+    }
 
 	void FixedUpdate(){
 		//rb2d.MoveRotation (angle);
